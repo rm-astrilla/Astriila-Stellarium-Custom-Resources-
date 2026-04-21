@@ -6,37 +6,20 @@
     <meta name="description" content="Custom Stellarium Resources by Raihan Mohammad">
     <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
     <style>
-      /* Memastikan tampilan penuh jika dibuka langsung di HP */
       body { margin: 0; overflow: hidden; }
-      .ar-button {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        z-index: 999;
-        padding: 10px;
-        background: rgba(0,0,0,0.5);
-        color: white;
-        border-radius: 5px;
-        font-family: sans-serif;
-        text-decoration: none;
-      }
     </style>
   </head>
   <body>
 
-    <a-scene>
-      
-      <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
-      <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
-      <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
-      <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
-      <a-sky color="#ECECEC"></a-sky>>
+    <a-scene loading-screen="dotsColor: white; backgroundColor: black">
       
       <a-assets>
         <img id="sky-taraju" src="equirectangular_mw.jpg" crossorigin="anonymous">
       </a-assets>
 
-      <a-sky src="#sky-taraju" rotation="0 -90 0" animation="property: rotation; to: 0 270 0; loop: true; dur: 100000; easing: linear">
+      <a-sky src="#sky-taraju" 
+             rotation="0 -90 0" 
+             animation="property: rotation; to: 0 270 0; loop: true; dur: 100000; easing: linear">
       </a-sky>
 
       <a-entity camera look-controls></a-entity>
